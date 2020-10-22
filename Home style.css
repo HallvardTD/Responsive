@@ -4,7 +4,6 @@
 }
 body {
   background-color: #eee;
-  margin: 40px;
 }
 
 nav {
@@ -12,142 +11,114 @@ nav {
   height: 100px;
   background-color: #fff;
 }
-
-ul {
- margin-left: 100px;
-}
-
-ul li {
-  list-style: none;
-  display: inline-block;
-  float: left;
-  line-height: 100px;
-}
-
-ul li a {
+.logo a{
   display: block;
   text-decoration: none;
-  font-size: 16px;
-  font-family: arial;
-  color: #1e1e1e;
-  padding: 0 20px;
+  font-family: Courier;
+  color: black;
+  font-size: 1.8em;
+  padding: 10px;
+  margin: 0px 10px;
+  text-align: left;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
-ul li a:hover {
-  color: red;
+.navbar{
+  font-family: Helvetica;
+  padding: 40px;
+  text-align: center;
+  background: rgb(255,255,255);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.wrapper {
-   background-color: #fff;
-	 color: #444;
+.navbar a{
+  color: black;
+  text-decoration: none;
+  font: 25px Helvetica;
+  margin: 0px 10px;
+  padding: 14px 16px; /* space between elements */
 }
-.wrapper {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-areas:
-     "header"
-     "sidebar"
-     "content"
-     "sidebar2"
-     "footer"
+
+li{
+    display: inline;
 }
-.sidebar {
-		grid-area: sidebar;
-	}
-
-.sidebar2 {
-		grid-area: sidebar2;
-	}
-
-.content {
-		grid-area: content;
-	}
-
-.header {
-		grid-area: header;
-	}
-
-.footer {
-		grid-area: footer;
-	}
-.container{
-  color: #fff;
-    width: 80%;
+.wrapper{
+  margin-top: 10px;
+  display: grid;
+    grid-gap: 10px;
+		grid-template-columns: 50%;
+    background-color: #fff;
+		color: #444;
+}
+.a{
+  grid-column: 1 / 2;
+		grid-row: 1;
+}
+.b{
+  grid-column: 2 ;
+  grid-row: 1;
+}
+.c{
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+.d{
+  grid-column: 2;
+  grid-row: 2;
+}
+.container1{
+    align-content: center;
+    font-size: 1.2em;
+    color: #00000;
     height: auto;
-    margin: auto;
+    margin: 10px;
     display: fixed;
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 10px;
-    background: rgb(100, 100, 100);
+    background: #fff;
 }
-@media only screen and (min-width: 500px)  {
-	.wrapper {
-
-		grid-template-columns: 20% auto;
-		grid-template-areas:
-    "header   header"
-		"sidebar  content"
-		"sidebar2 sidebar2"
-		"footer   footer";
-	}
-	}
-
-	@media only screen and (min-width: 600px)   {
-		.wrapper {
-      grid-gap: 20px;
-			grid-template-columns: 120px auto 120px;
-			grid-template-areas:
-      "header  header  header"
-			"sidebar content sidebar2"
-			"footer  footer  footer";
-			max-width: 600px;
-		}
-	}
-
-.img-planets {
+.container1 p{
+  text-align: center;
+  margin: 40px;
+  font-size: 1.6em
+}
+.container2{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.divcenter{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: #fff;
+  font-
+}
+.h2{
+    text-align: center;
+    margin: 3em;
+    font-size: 2.5em;
+}
+.img-back{
   display: none;
+  opacity: 0.9;
 }
-
-.img-info {
-  width: 100%;
-}
-
-.img-info h2{
-  width: 100%;
-  padding: 30px 30px 20px;
-  font-family: arial;
-  font-size: 50px;
-  color: #111;
-  line-height: 44px;
-}
-
-.img-info p{
-  padding: 0px 30px 20px;
-  font-family: arial;
-  font-size: 16px;
-  color: #111;
-  line-height: 24px;
-}
-
 @media only screen and (min-width: 768px) {
-  .img-planets {
+  .img-back {
     display: block;
-    width: 106%;
-    padding-bottom: 30px;
+    width: 100%;
   }
-
-  .wrapper {
-    width: 600px;
-    margin: 0 auto;
-  }
-
-  .img-info h2{
-    padding: 20px 0px 0px;
-  }
-
-  .img-info p{
-    padding: 20px 0px 0px;
-  }
-
+.img-barn{
+  width: 100%;
 }
